@@ -45,6 +45,8 @@ def callback():
 def handle_message(event):
     if (event.message.text == "高文超？"):
         txt = "不是啦，是他设置的聊天机器人啦。"
+    if (event.message.text == "高文超是单身吗"):
+        txt = "I'm not single, I'm solo."
     else:
         txt = "高文超还没把这句话设置进来呢，抱歉啦"
     # txt = event.message.text
