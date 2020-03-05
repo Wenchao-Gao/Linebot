@@ -14,8 +14,8 @@ from linebot.models import (
 app = Flask(__name__)
 
 #環境変数取得
-ACCESS_TOKEN = "aaa"
-SECRET = "bbb"
+ACCESS_TOKEN = "1653921129"
+SECRET = "a099cea6f830485870a134ea0a1e19e5"
 
 line_bot_api = LineBotApi(ACCESS_TOKEN)
 handler = WebhookHandler(SECRET)
@@ -49,5 +49,5 @@ def handle_message(event):
 
 if __name__ == "__main__":
 #    app.run()
-    port = 3002
+    port = int(os.getenv("PORT"))
     app.run(host="0.0.0.0", port=port)
