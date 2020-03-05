@@ -43,8 +43,12 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    txt = event.message.text
-    txt = txt + "だ"
+    if (event.message.text == "高文超？"):
+        txt = "不是啦，是他设置的聊天机器人啦。"
+    else:
+        txt = "高文超还没把这句话设置进来呢，抱歉啦"
+    # txt = event.message.text
+    # txt = txt + "だ"
 
     line_bot_api.reply_message(
         event.reply_token,
